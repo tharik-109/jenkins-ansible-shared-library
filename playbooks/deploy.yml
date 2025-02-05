@@ -1,0 +1,19 @@
+- name: Deploy Application
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install MongoDB
+      apt:
+        name: mongodb-org
+        state: present
+
+    - name: Start MongoDB
+      service:
+        name: mongod
+        state: started
+        enabled: yes
+
+    - name: Deploy Application Code
+      copy:
+        src: /path/to/source
+        dest: /var/www/html
