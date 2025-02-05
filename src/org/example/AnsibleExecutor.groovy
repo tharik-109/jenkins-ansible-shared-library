@@ -11,7 +11,7 @@ class AnsibleExecutor {
 static void runAnsible(script) {
     script.stage('Run Ansible Playbook') {
         script.sh '''
-        ansible-playbook -i inventory.ini playbooks/deploy.yml
+        ansible-playbook playbooks/deploy.yml
         '''
     }
 }
