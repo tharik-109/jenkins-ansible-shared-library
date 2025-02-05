@@ -12,21 +12,21 @@ pipeline {
             }
         }
 
-        stage('User Approval') {
-            steps {
-                script {
-                    org.example.UserApproval.requestApproval(this)
-                }
-            }
-        }
-
-        stage('Execute Ansible') {
-            steps {
-                script {
-                    org.example.AnsibleExecutor.runAnsible(this)
-                }
-            }
-        }
+        //stage('User Approval') {
+          //  steps {
+            //    script {
+              //      org.example.UserApproval.requestApproval(this)
+                //}
+            //}
+        //}
+//
+  //      stage('Execute Ansible') {
+      //      steps {
+    //            script {
+        //            org.example.AnsibleExecutor.runAnsible(this)
+            //    }
+          //  }
+        //}
 
         stage('Notify') {
             steps {
