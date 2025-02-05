@@ -9,10 +9,3 @@ class AnsibleExecutor {
     }
 }
 
-static void runAnsible(script) {
-    script.stage('Run Ansible Playbook') {
-        script.sh '''
-        ansible-playbook playbooks/deploy.yml
-        '''
-    }
-}
